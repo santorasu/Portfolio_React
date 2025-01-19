@@ -10,17 +10,23 @@
 
 .hero img {
     margin-top: 10px;
-    width: 300px; /* Updated size */
-    height: 300px; /* Updated size */
-    border-radius: 50%; /* Round shape */
-    object-fit: cover; /* Ensures proper aspect ratio */
-    border: 5px solid #fff; /* Optional border */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.hero img:hover {
+    transform: scale(1.05);
+    border-color: #b415ff;
 }
 
 .hero h1 {
     text-align: center;
     width: 70%;
-    font-size: 90px;
+    font-size: 50px;
     font-weight: 600;
     line-height: 1.2;
 }
@@ -37,7 +43,7 @@
     width: 50%;
     font-size: 24px;
     line-height: 40px;
-    color: #ddd; /* Slightly lighter text color */
+    color: #ddd;
 }
 
 .hero-action {
@@ -62,8 +68,9 @@
     color: white;
 }
 
-/* Media Queries */
+/* Responsive Design */
 
+/* For medium screens (max-width: 992px) */
 @media (max-width: 992px) {
     .hero img {
         width: 250px;
@@ -71,7 +78,8 @@
     }
 
     .hero h1 {
-        font-size: 72px;
+        font-size: 42px;
+        width: 80%;
     }
 
     .hero p {
@@ -86,29 +94,55 @@
 
     .hero-connect, .hero-resume {
         padding: 20px 60px;
+        font-size: 22px;
     }
 }
 
-@media (max-width: 576px) {
+/* For small screens (max-width: 768px) */
+@media (max-width: 768px) {
     .hero img {
-        margin-top: 100px;
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 220px;
     }
 
     .hero h1 {
-        font-size: 48px;
+        font-size: 36px;
+        width: 85%;
+    }
+
+    .hero p {
+        width: 80%;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .hero-connect, .hero-resume {
+        padding: 18px 50px;
+        font-size: 20px;
+    }
+}
+
+/* For extra small screens (max-width: 576px) */
+@media (max-width: 576px) {
+    .hero img {
+        margin-top: 50px;
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
         width: 90%;
     }
 
     .hero p {
-        width: 100%;
-        font-size: 18px;
+        width: 90%;
+        font-size: 16px;
         line-height: 1.5;
     }
 
     .hero-connect, .hero-resume {
-        padding: 15px 50px;
-        font-size: 20px;
+        padding: 15px 40px;
+        font-size: 18px;
     }
 }

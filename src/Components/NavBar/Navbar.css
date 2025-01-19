@@ -35,3 +35,77 @@
 .nav-connect:hover{
     transform: scale(1.05);
 }
+
+/* Responsive CSS */
+@media (max-width: 1200px) {
+    .navbar {
+        margin: 20px 100px;
+    }
+
+    .nav-menu {
+        gap: 40px;
+        font-size: 18px;
+    }
+
+    .nav-connect {
+        font-size: 20px;
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        margin: 20px 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 20px;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .nav-connect {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        margin: 20px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .nav-connect {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        margin: 10px;
+    }
+
+    .navbar p {
+        font-size: 30px;
+    }
+
+    .nav-menu {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .nav-connect {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}

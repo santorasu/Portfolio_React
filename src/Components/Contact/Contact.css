@@ -5,19 +5,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
+    gap: 60px;
+    padding: 60px 20px;
+    background-color: #1a1a1a; /* Distinct darker background for separation */
 }
 
 .contact-title {
     position: relative;
-    /* text-align: center; */
+    text-align: center;
 }
 
 .contact-title h1 {
-    padding: 0px 30px;
-    font-size: 80px;
+    padding: 0 20px;
+    font-size: 60px;
     font-weight: 600;
+    color: #ffffff;
 }
 
 .contact-title img {
@@ -25,109 +27,192 @@
     bottom: 0;
     right: 0;
     z-index: -1;
+    opacity: 0.1; /* Subtle background pattern */
+    max-width: 150px;
 }
 
 .contact-section {
     display: flex;
-    gap: 150px;
-    
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
 }
 
 .contact-left {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
+    max-width: 600px;
 }
 
 .contact-left h1 {
-    font-size: 80px;
+    font-size: 50px;
     font-weight: 700;
     background: linear-gradient(270deg, #df8908 80%, #b415ff 100%);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 .contact-left p {
-   max-width: 550px;
-   color: #d8d8d8;
-   font-size: 20px;
-   line-height: 35px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #d8d8d8;
 }
 
 .contact-details {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    color: #d8d8d8;
-    font-size: 22px;
+    gap: 15px;
 }
 
 .contact-detail {
     display: flex;
     align-items: center;
-    gap: 20px;
-}
-
-/* .contact-detail img {
-    width: 40px;
-    height: 40px;
-}
-
-.contact-detail p {
+    gap: 15px;
+    color: #d8d8d8;
     font-size: 18px;
-    color: #333;
-} */
+}
+
+.contact-detail img {
+    width: 30px;
+    height: 30px;
+}
 
 .contact-right {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 30px;
+    gap: 25px;
+    max-width: 700px;
 }
 
 .contact-right label {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
     color: #d8d8d8;
 }
 
-.contact-right input{
+.contact-right input, 
+.contact-right textarea {
+    width: 100%;
     border: none;
-    width: 700px;
-    height: 78px;
-    padding-left: 20px;
-    border-radius: 4px;
-    background: #32323c;
-    color: #a0a0a0;
-    font-family: Outfit;
-    font-size: 20px;
+    border-radius: 8px;
+    padding: 20px;
+    background: #2c2c2c;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.contact-right input:focus, 
+.contact-right textarea:focus {
+    outline: none;
+    border: 2px solid #b415ff;
 }
 
 .contact-right textarea {
-    width: 650px;
-    border: none;
-    padding: 25px;
-    border-radius: 4px;
-    background: #32323c;
-    color: #a0a0a0;
-    font-family: Outfit;
-    font-size: 20px;
+    height: 150px;
 }
 
 .contact-submit {
-   border: none;
-   color: white;
-   border-radius: 50px;
-   background: linear-gradient(270deg, #df8908 80%, #b415ff 100%);
-   font-size: 22px;
-   padding: 20px 60px;
-   margin-bottom: 50px;
-   cursor: pointer;
-   transition: 0.3s;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #df8908 80%, #b415ff 100%);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .contact-submit:hover {
-    transition: 0.3s;
     transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(180, 21, 255, 0.5);
+}
+
+/* Media Queries */
+
+@media (max-width: 992px) {
+    .contact-left h1 {
+        font-size: 40px;
+    }
+
+    .contact-title h1 {
+        font-size: 50px;
+    }
+
+    .contact-title img {
+        max-width: 120px;
+    }
+
+    .contact-right input, 
+    .contact-right textarea {
+        font-size: 16px;
+    }
+
+    .contact-submit {
+        font-size: 18px;
+        padding: 12px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-left h1 {
+        font-size: 35px;
+    }
+
+    .contact-left p {
+        font-size: 16px;
+    }
+
+    .contact-title h1 {
+        font-size: 40px;
+    }
+
+    .contact-detail {
+        font-size: 16px;
+    }
+
+    .contact-submit {
+        padding: 12px 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-title h1 {
+        font-size: 30px;
+    }
+
+    .contact-left h1 {
+        font-size: 28px;
+    }
+
+    .contact-left p {
+        font-size: 14px;
+    }
+
+    .contact-detail {
+        font-size: 14px;
+    }
+
+    .contact-right label {
+        font-size: 16px;
+    }
+
+    .contact-right input, 
+    .contact-right textarea {
+        font-size: 14px;
+    }
+
+    .contact-submit {
+        font-size: 14px;
+        padding: 10px 30px;
+    }
 }
