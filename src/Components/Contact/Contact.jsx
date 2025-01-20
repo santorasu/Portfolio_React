@@ -14,7 +14,7 @@ const Contact = () => {
             <div className="contact-section">
                 <div className="contact-left">
                     <h1>Lets talk</h1>
-                    <p>I am passionate about developing innovative and user-friendly applications. Let’s collaborate to bring your ideas to life, whether its an app, website, or custom software solution.</p> 
+                    <p>I am passionate about developing innovative and user-friendly applications. </p> 
                     <div className="contact-details">
                         <div className="contact-detail">
                             <img src={mail_icon} alt="" />
